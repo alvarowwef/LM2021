@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <body>
+        <table style="border: 1px solid black; 
+            margin-top: 100px; margin-left: 100px" rules="groups">
+            <!--En html4 se usaba la etiqueta border en lugar de style -->
+            <caption>Horario de clase</caption>
+            <thead>
+                <tr>
+                    <th>
+                        Lunes
+                    </th>
+                    <th>
+                        Martes
+                    </th>
+                    <th style="padding: 40px;"> 
+                        Miércoles
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" style="text-align: center;">1-2</td>
+                    <td rowspan="2" style="text-align: center;">3-6</td>
+                </tr>
+                <tr>
+                    <td><table rules="groups";style="border: 3px solid black">
+                        <!--En html4 se usaba la etiqueta border en lugar de style -->
+                        <caption>Horario de clase</caption>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Lunes
+                                </th>
+                                <th>
+                                    Martes
+                                </th>
+                                <th> 
+                                    Miércoles
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" style="text-align: center;">1-2</td>
+                                <td rowspan="2" style="text-align: center;">3-6</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>9</td>
+                            </tr>
+                        </tfoot>
+                    </table></td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>9</td>
+                </tr>
+            </tfoot>
+        </table>
+    
+    
+    </body>
+</html>
