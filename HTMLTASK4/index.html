@@ -1,39 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primark</title>
+    <title>Sastrería Sánchez, trabajo</title>
 
     <meta name="description" content="Trabaja con nosotros"/>
-    <meta name="keywords" content="trabajo, ropa, dependiente, almacen, dinero, tienda, Primark,"/>
+    <meta name="keywords" content="trabajo, ropa, dependiente, almacen, dinero, tienda, sastre, tela"/>
     <meta name="robots" content="Index, Follow"/>
     <meta name="language" content="ES"/>
-    <meta name="summary" content="Cuestionario para trabajar en Primark, tienda puntera de ropa, con tiendas en toda España"/>
+    <meta name="summary" content="Cuestionario para trabajar en Sastrería Sánchez, tienda puntera de ropa, con tiendas en toda España"/>
 
 </head>
 <body>
-    <div style="margin: 0px auto">
+    <div style="margin: 10px auto; background-color: beige; font-family: Arial;">
         <fieldset>
-            <legend>Petición de trabajo</legend>
+            <legend style="text-align: center; font-size: 24px;">Petición de trabajo</legend>
         <form action="registro.php" method="POST">
             <table>
                 <tr>
-                    <td><label for="nombre">Nombre</label></td>
+                    <td><label for="nombre">Nombre </label></td>
                     <td><input type="text" 
                         name="nombre" 
                         id="nombre"
-                        value=""
-                        placeholder="Introducir Nombre"
+                        placeholder="Nombre"
                         autofocus
                         size="30"
-                        maxlength="15"
-                        pattern="[A-Z]"
-                        
-                        />
-                        
+                        maxlength="20"
+                        required/>
                     </td>
                 </tr>
+                <tr>
+                    <td><label for="apellidos">Apellidos </label></td>
+                    <td><input type="text" 
+                        name="apellidos" 
+                        id="apellidos"
+                        placeholder="Apellidos"
+                        size="40"
+                        maxlength="40"
+                        required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pregunta">Mayor de edad</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="pregunta" 
+                                id="pregunta" value="S" checked /><span>Sí</span>
+                        <input type="radio" name="pregunta" 
+                                id="pregunta" value="N" /><span>No</span>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Edad">Edad</label></td>
+                    <td><input type="text"
+                    name="Edad"
+                    id="Edad"
+                    placeholder="Introducir Edad"
+                    size="10"
+                    maxlength="2"
+                    required/>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label for="provincias">Provincias</label>
+                    </td>
+                    <td>
+                        <select name="provincias" id="provincias">
+                            <option value="0">Seleccione Provincia</option>
+                            <optgroup label="Andalucía">                                
+                                <option value="1">Almería</option>
+                                <option value="2">Cádiz</option>
+                                <option value="3">Córdoba</option>
+                                <option value="4">Granada</option>
+                                <option value="5">Huelva</option>
+                                <option value="6">Jaén</option>
+                                <option value="7">Málaga</option>
+                                <option value="8">Sevilla</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="direccion">Dirección</label>
+                    </td>
+                    
+                    <td>
+                        <input type="text"
+                        name="direccion"
+                        id="direccion"
+                        placeholder="Calle"
+                        size="40"
+                        maxlength="40"
+                        required/>
+                    </td>
+                    <td>
+                        <input type="text"
+                        name="numero"
+                        id="numero"
+                        placeholder="Número"
+                        size="15"
+                        maxlength="20"
+                        required/>
+                    </td>
+                    <td>
+                        <input type="text"
+                        name="puerta"
+                        id="puerta"
+                        placeholder="Puerta"
+                        size="15"
+                        maxlength="20"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="telefono">Teléfono de contacto</label></td>
+                    <td>
+                        <input type="tel" 
+                        name="telefono" 
+                        id="telefono"
+                        required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="trabajo">¿Trabajo anterior?</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="pregunta2" id="pregunta2" value="S"/><span>Sí</span>
+                        <input type="radio" name="pregunta2" id="pregunta2" value="N"/><span>No</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Fecha">Finalización del empleo anterior</label>
+                    </td>
+                    <td>
+                        <input type="month" name="mes" id="mes"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="redes">Redes sociales</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="Twitter" id="redes" value="T"/><span>Twitter</span>
+                        <input type="checkbox" name="Facebook" id="redes" value="F"/><span>Facebook</span>
+                        <input type="checkbox" name="Instagram" id="redes" value="I"/><span>Instagram</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="descripcion">Aptitudes para el trabajo</label></td>
+                    <td>
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="10" maxlength="200"></textarea>
+                    </td>
+                </tr>                           
+                <tr>
+                    <td><label for="email">email</label></td>
+                    <td><input type="email" name="email" id="email" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset" value="Borrar"/>
+                    </td>
+                    <td>
+                        <input type="submit" value="Enviar"/>
+                    </td>
+                </tr>            
             </table>
         </form>
         </fieldset>
